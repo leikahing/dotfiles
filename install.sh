@@ -14,7 +14,10 @@ function setupHome() {
     printf "${YELLOW}Setting up home..."
     rsync --exclude "README.md" \
           --exclude ".git/" \
+          --exclude ".gitignore" \
           --exclude "fonts/" \
+          --exclude "homebrew/" \
+          --exclude "install.sh" \
           -avh --no-perms . ${HOME}
     printf "${YELLOW}DONE!\n"
     exec zsh
