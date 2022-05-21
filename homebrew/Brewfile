@@ -11,5 +11,6 @@ brew "git"
 brew "vim"
 brew "grep"
 brew "pv"
+brew "podman"
 
 cask "alacritty"

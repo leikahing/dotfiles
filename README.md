@@ -4,13 +4,13 @@ This isn't really a document for you, unless you're me. I'm writing this mostly 
 
 ## Personal Motivation
 
-This is a rebuild of the dotfiles I've been using throughout the last few years either on my own computer or when I was working at Facebook.
+This is a rewrite of the dotfiles I've been using throughout the last few years either on my own computer or when I was working at Facebook.
 
 Those old dotfiles got pretty out of hand and I realized I started having no idea what was going on sometimes because some of my configuration was abstracted away via the likes of `prezto`. Plus, it started making my command line super-slow to load.
 
 I also need way less complexity now in my dotfiles because I also just slimmed down what I need to write code or whatever.
 
-## Setup
+## Basic Setup
 
 ```
 # clone the repo
@@ -24,7 +24,22 @@ homebrew/brew.sh
 vim +'call minpac#update()'
 ```
 
-## Things to Remember
+## Extra Setup
+
+My current setup includes some extra dev/container tools like...
+
+* `asdf`
+* `podman` - because I didn't want to keep using `docker`, and `podman` has a nicer logo
+
+So to start, add the elixir plugin to `asdf`
+
+```
+# add elixir plugin to asdf
+asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+```
+
+
+## Extra Git Setup
 
 1. `.gitconfig` reads from `~/.gitconfig.local` if you need to specify stuff like usernames
 

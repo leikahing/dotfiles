@@ -32,7 +32,18 @@ export EDITOR=vim
 export VISUAL=${EDITOR}
 export PAGER=less
 
-command -v brew > /dev/null && export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
+if type brew &> /dev/null; then
+  export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
+
+  # enable brew's zsh completions
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  # setup asdf autocompletes
+  source $(brew --prefix asdf)/libexec/asdf.sh
+fi
+
+autoload -Uz compinit
+compinit
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
