@@ -1,1 +1,11 @@
+# Mac stuff
+.DS_Store
+Thumbs.db
+.Trashes
+.Spotlight-V100
+
+# Dreaded vim swap
+*.swp
+
+# homebrew lock
 Brewfile.lock.json

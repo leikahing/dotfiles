@@ -13,8 +13,8 @@ function installFonts() {
 function setupHome() {
     printf "${YELLOW}Setting up home..."
     rsync --exclude "README.md" \
+          --exclude ".DS_Store" \
           --exclude ".git/" \
-          --exclude ".gitignore" \
           --exclude "fonts/" \
           --exclude "homebrew/" \
           --exclude "install.sh" \
