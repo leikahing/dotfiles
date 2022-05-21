@@ -21,3 +21,5 @@ else
   " Uncomment to load all plugins right now
   "packloadall
 endif
+
+set compatible
