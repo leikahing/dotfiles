@@ -30,5 +30,6 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     installFonts
     setupHome
 fi
-unset installFonts
-unset setupHome
+
+unfunction installFonts
+unfunction setupHome

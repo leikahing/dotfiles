@@ -1,16 +1,29 @@
-brew "gnupg"
-brew "asdf"
-brew "jq"
-brew "tmux"
-brew "the_silver_searcher"
+# GNU versions
+
 brew "coreutils"
-brew "gnu-sed"
 brew "findutils"
-brew "ripgrep"
+brew "grep"
+brew "gnu-sed"
+
+# Keychain
+
+brew "gnupg"
+
+# newer than macos, though probably don't need anymore
+
 brew "git"
 brew "vim"
-brew "grep"
-brew "pv"
-brew "podman"
 
+# misc tools
+
+brew "jq"
+brew "pv"
+brew "ripgrep"
+brew "the_silver_searcher"
+brew "tmux"
 cask "alacritty"
+
+# container/versioning tools
+brew "podman"
+brew "asdf"
+
