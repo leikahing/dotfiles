@@ -28,3 +28,11 @@ cask "alacritty"
 brew "podman"
 brew "asdf"
 
+# debugging/reverse engineering tools
+
+brew "binutils"
+# brew "gdb" # Doesn't work on Apple Silicon, using lldb instead
+brew "hydra"
+brew "radare2"
+brew "socat"
+
