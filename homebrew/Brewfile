@@ -12,12 +12,15 @@ brew "gnupg"
 # newer than macos, though probably don't need anymore
 
 brew "git"
+brew "git-lfs"
 brew "vim"
 brew "zsh"
 
 # misc tools
 
+brew "fzf"
 brew "jq"
+brew "parallel"
 brew "pv"
 brew "ripgrep"
 brew "the_silver_searcher"
@@ -32,6 +35,7 @@ brew "asdf"
 
 brew "binutils"
 # brew "gdb" # Doesn't work on Apple Silicon, using lldb instead
+brew "htop"
 brew "hydra"
 brew "radare2"
 brew "socat"
