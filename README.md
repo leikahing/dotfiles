@@ -24,7 +24,17 @@ homebrew/brew.sh
 vim +'call minpac#update()'
 ```
 
-## Extra Setup
+## Vim Setup
+
+```
+# I use YouCompleteMe which requires some installation of stuff...
+# So let's enable the C++ completer
+
+cd .vim/pack/minpac/start/youcompleteme
+python3 install.py --clangd-completer
+```
+
+## Dev Setup
 
 My current setup includes some extra dev/container tools like...
 

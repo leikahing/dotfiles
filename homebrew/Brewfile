@@ -36,3 +36,5 @@ brew "hydra"
 brew "radare2"
 brew "socat"
 
+# build utils
+brew "cmake"
