@@ -8,3 +8,6 @@ window:
 font:
   normal:
     family: "MesloLGS NF"
+
+key_bindings:
+  - { key: N, mods: Command, action: CreateNewWindow }

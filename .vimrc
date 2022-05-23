@@ -73,6 +73,7 @@ set laststatus=2
 " disable showmode because of lightline
 set noshowmode
 set ruler
+set title
 
 if !&scrolloff
   set scrolloff=10

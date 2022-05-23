@@ -13,6 +13,7 @@ brew "gnupg"
 
 brew "git"
 brew "vim"
+brew "zsh"
 
 # misc tools
 

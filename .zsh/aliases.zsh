@@ -12,3 +12,7 @@ alias ls="command ls ${colorflag}"
 alias grep="grep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
+
+# git aliases
+alias gst="git status"
+alias gsl="git sl"

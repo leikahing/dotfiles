@@ -48,6 +48,7 @@ if type brew &> /dev/null; then
   local brew_prefix="$(brew --prefix)"
   export PATH="${brew_prefix}/opt/coreutils/libexec/gnubin:${PATH}"
   export PATH="${brew_prefix}/opt/findutils/libexec/gnubin:${PATH}"
+  export PATH="${brew_prefix}/opt/grep/libexec/gnubin:${PATH}"
   export PATH="${brew_prefix}/opt/gnu-sed/libexec/gnubin:${PATH}"
 
   # enable brew's zsh completions - this needs to go before compinit
