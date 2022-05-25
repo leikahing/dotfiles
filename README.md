@@ -44,8 +44,12 @@ My current setup includes some extra dev/container tools like...
 So to start, add the elixir plugin to `asdf`
 
 ```
-# add elixir plugin to asdf
+# add elixir plugin to asdf and install latest elixir version
+# note that erlang is needed, and that brew should have been run
+asdf plugin add erlang https://github.com/asdf-vm/asdf-erlang.git
 asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+asdf install erlang latest
+asdf install elixir latest
 ```
 
 

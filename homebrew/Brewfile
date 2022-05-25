@@ -40,5 +40,12 @@ brew "hydra"
 brew "radare2"
 brew "socat"
 
-# build utils
+
+# build utils for asdf/erlang/etc.
+
+brew "autoconf"
 brew "cmake"
+brew "fop"
+brew "libxslt"
+brew "openssl@1.1"
+brew "wxwidgets"
