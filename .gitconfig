@@ -1,22 +1,23 @@
 # private config go here
 [include]
-	path = ~/.gitconfig.local
+    path = ~/.gitconfig.local
 
 [alias]
-	# pretty one-line log with short info
-	sl = log --pretty=oneline -n 20 --graph --abbrev-commit
+    # pretty one-line log with short info
+    sl = log --pretty=oneline -n 20 --graph --abbrev-commit
 
-	# enumerate aliases
-	aliases = config --get-regexp alias
+    # enumerate aliases
+    aliases = config --get-regexp alias
 
-	# Show user email for current repo
-	whoami = config user.email
+    # Show user email for current repo
+    whoami = config user.email
 
 [color]
-	ui = auto
+    ui = auto
 
 [apply]
-	whitespace = fix
+    whitespace = fix
 
 [core]
-	editor = vim
+    editor = vim
+    excludesfile = ~/.gitignore
