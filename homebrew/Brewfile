@@ -49,3 +49,10 @@ brew "fop"
 brew "libxslt"
 brew "openssl@1.1"
 brew "wxwidgets"
+
+# image/video tools
+brew "ffmpeg"
+brew "gifsicle"
+
+# prod tools
+brew "flyctl"
