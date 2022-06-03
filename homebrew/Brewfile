@@ -56,3 +56,4 @@ brew "gifsicle"
 
 # prod tools
 brew "flyctl"
+brew "gh" # github, fyi
