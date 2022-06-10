@@ -26,6 +26,7 @@ brew "ripgrep"
 brew "the_silver_searcher"
 brew "tmux"
 cask "alacritty"
+cask "powershell"
 
 # container/versioning tools
 brew "podman"
@@ -57,3 +58,8 @@ brew "gifsicle"
 # prod tools
 brew "flyctl"
 brew "gh" # github, fyi
+
+# python dev libs
+brew "openssl"
+brew "xz"
+brew "gdbm"
