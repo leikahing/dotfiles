@@ -4,6 +4,9 @@ Thumbs.db
 .Trashes
 .Spotlight-V100
 
+# Stuff that is generated via Vim/YCM/clangd/etc.
+.cache
+
 # Dreaded vim swap
 *.swp
 
