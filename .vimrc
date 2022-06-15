@@ -26,6 +26,9 @@ if exists('g:loaded_minpac')
 
   call minpac#add('elixir-editors/vim-elixir')
 
+  " testing out completers
+  call minpac#add('ycm-core/youcompleteme')
+
   " Uncomment to load all plugins right now
   "packloadall
 endif
@@ -106,3 +109,6 @@ set softtabstop=4
 
 " custom chars for 'set list'
 set listchars=eol:$,tab:│·,space:.,trail:·
+
+" for terminal mode, go into 'term-normal' with ctrl-b
+tnoremap <C-b> <C-\><C-n>
