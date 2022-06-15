@@ -45,9 +45,11 @@ brew "socat"
 # build utils for asdf/erlang/etc.
 
 brew "autoconf"
+brew "bazelisk"
 brew "cmake"
 brew "fop"
 brew "libxslt"
+brew "meson"
 brew "openssl@1.1"
 brew "wxwidgets"
 
@@ -63,3 +65,6 @@ brew "gh" # github, fyi
 brew "openssl"
 brew "xz"
 brew "gdbm"
+
+# misc libs
+brew "boost"
