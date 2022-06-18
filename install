@@ -1,0 +1,38 @@
+#!/usr/bin/env zsh
+
+autoload -U colors && colors
+
+cd "$(dirname "${BASH_SOURCE}")"
+
+function installFonts() {
+    printf "${bold_color}${fg[yellow]}Installing fonts...${reset_color}"
+    rsync -avh --no-perms fonts/ ${HOME}/Library/Fonts
+    printf "${bold_color}${fg[yellow]}DONE!${reset_color}\n"
+}
+
+function setupHome() {
+    printf "${bold_color}${fg[red]}Setting up home...${reset_color}"
+    rsync --exclude "README.md" \
+          --exclude ".DS_Store" \
+          --exclude ".git/" \
+          --exclude "fonts/" \
+          --exclude "homebrew/" \
+          --exclude "install.sh" \
+          -avh --no-perms . ${HOME}
+    printf "${bold_color}${fg[green]}DONE!${reset_color}\n"
+    exec zsh
+}
+
+
+read -q -k 1 "answer?${bold_color}${fg[magenta]}This will probably overwrite some stuff. Good to go [Yy]?${reset_color} "
+echo ""
+if [[ $answer = 'y' ]]; then
+    installFonts
+    setupHome
+else
+    echo "${bold_color}${fg[red]}Doing nothing. 左様なら${reset_color}"
+fi
+
+unfunction installFonts
+unfunction setupHome
+unfunction colors
