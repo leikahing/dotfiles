@@ -61,6 +61,8 @@ brew "gifsicle"
 brew "flyctl"
 brew "gh" # github, fyi
 
+brew "python@3.10"
+
 # python dev libs
 brew "openssl"
 brew "xz"

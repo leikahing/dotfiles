@@ -19,3 +19,9 @@ alias gsl="git sl"
 
 # meson aliases
 alias mb="meson compile -C"
+
+# gpg
+alias restart_gpg="killall gpg-agent && gpg-agent --daemon"
+
+# python virtualenv
+alias create-venv="$(brew --prefix python@3.10)/bin/python3 -m venv .venv"
