@@ -41,6 +41,12 @@ if has('syntax') && !exists('g:syntax_on')
   syntax enable
 endif
 
+let g:terminal_ansi_colors = [
+ \'#282828', '#f43753', '#c9d05c', '#ffc24b',
+ \'#b3deef', '#d3b987', '#73cef4', '#eeeeee',
+ \'#1d1d1d', '#f43753', '#c9d05c', '#ffc24b',
+ \'#b3deef', '#d3b987', '#73cef4', '#ffffff']
+
 if has('termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
