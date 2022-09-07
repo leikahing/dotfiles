@@ -41,7 +41,6 @@ brew "hydra"
 brew "radare2"
 brew "socat"
 
-
 # build utils for asdf/erlang/etc.
 
 brew "autoconf"
@@ -70,3 +69,6 @@ brew "gdbm"
 
 # misc libs
 brew "boost"
+
+# static site gen reqs
+brew "node"
