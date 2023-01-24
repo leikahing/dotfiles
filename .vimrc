@@ -26,8 +26,11 @@ if exists('g:loaded_minpac')
 
   call minpac#add('elixir-editors/vim-elixir')
 
+  call minpac#add('ntpeters/vim-better-whitespace')
+
   " testing out completers
   call minpac#add('ycm-core/youcompleteme')
+  call minpac#add('slashmili/alchemist.vim')
 
   " Uncomment to load all plugins right now
   "packloadall
