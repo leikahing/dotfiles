@@ -21,3 +21,6 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore
+
+[push]
+	autoSetupRemote = true
