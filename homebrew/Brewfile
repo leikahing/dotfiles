@@ -72,3 +72,6 @@ brew "boost"
 
 # static site gen reqs
 brew "node"
+
+# db tools?
+brew "pgcli"
