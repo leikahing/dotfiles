@@ -25,3 +25,8 @@ alias restart_gpg="killall gpg-agent && gpg-agent --daemon"
 
 # python virtualenv
 alias create-venv="$(brew --prefix python@3.10)/bin/python3 -m venv .venv"
+
+# podman nonsense
+# podman machine ssh "sudo systemctl restart chronyd"
+alias podman_sync_time="podman machine ssh 'sudo systemctl restart chronyd'"
+alias podman_get_date="podman machine ssh 'date'"
