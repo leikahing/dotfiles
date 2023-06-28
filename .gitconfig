@@ -2,6 +2,9 @@
 [include]
     path = ~/.gitconfig.local
 
+[includeIf "gitdir:~/work/"]
+    path = ~/work/.gitconfig.work
+
 [alias]
     # pretty one-line log with short info
     sl = log --pretty=oneline -n 20 --graph --abbrev-commit
