@@ -17,7 +17,7 @@ function setupHome() {
           --exclude ".git/" \
           --exclude "fonts/" \
           --exclude "homebrew/" \
-          --exclude "install" \
+          --exclude "dotstrap" \
           -avh --no-perms . ${HOME}
     printf "${bold_color}${fg[green]}DONE!${reset_color}\n"
     exec zsh
