@@ -26,7 +26,9 @@ brew "ripgrep"
 brew "the_silver_searcher"
 brew "tmux"
 cask "alacritty"
-cask "powershell"
+
+# aws
+cask "session-manager-plugin"
 
 # container/versioning tools
 brew "podman"
