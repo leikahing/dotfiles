@@ -141,6 +141,8 @@ set softtabstop=4
 " custom chars for 'set list'
 set listchars=eol:$,tab:│·,space:.,trail:·
 
+set rtp+=/opt/homebrew/opt/fzf
+
 " for terminal mode, go into 'term-normal' with ctrl-b
 tnoremap <C-b> <C-\><C-n>
 
