@@ -26,6 +26,8 @@ HISTFILE=~/.histfile
 HISTSIZE=1000000
 SAVEHIST=1000000
 
+setopt autocd
+
 setopt NO_HUP # don't HUP backgrounded things if I kill the parent shell
 setopt NO_BG_NICE # don't nice background jobs
 setopt LOCAL_OPTIONS
@@ -69,6 +71,7 @@ source ${plugin_dir}/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # load my custom aliases
 source ${plugin_dir}/aliases.zsh
+source ${plugin_dir}/erlang.zsh
 
 unfunction zcompile-many
 unset plugin_dir

@@ -30,4 +30,7 @@ alias create-venv="$(brew --prefix python@3.10)/bin/python3 -m venv .venv"
 # podman machine ssh "sudo systemctl restart chronyd"
 alias podman_sync_time="podman machine ssh 'sudo systemctl restart chronyd'"
 alias podman_get_date="podman machine ssh 'date'"
-alias start_pg="PGPASSWORD='postgres' podman run -it postgres:latest"
+alias start_pg="podman run -it -e POSTGRES_PASSWORD=\"postgres\" -p 5432:5432 postgres:latest"
+
+alias sql_dev='pgcli -D local'
+alias sql_prod='pgcli -D production'
