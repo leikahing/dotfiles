@@ -18,6 +18,8 @@ brew "zsh"
 
 # misc tools
 
+brew "just"
+brew "bat"
 brew "fzf"
 brew "jq"
 brew "parallel"
@@ -61,7 +63,7 @@ brew "gifsicle"
 brew "flyctl"
 brew "gh" # github, fyi
 
-brew "python@3.12"
+brew "python@3.13"
 
 # python dev libs
 brew "openssl"
