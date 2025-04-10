@@ -17,6 +17,10 @@ if exists('g:loaded_minpac')
   "call minpac#add('k-takata/minpac', {'type': 'opt', 'frozen': 'TRUE'})
 
   " plugins!
+  call minpac#add('tpope/vim-repeat')
+  call minpac#add('tpope/vim-surround')
+  call minpac#add('tpope/vim-fugitive')
+
   call minpac#add('ntpeters/vim-better-whitespace')
   call minpac#add('jacoborus/tender.vim')
   call minpac#add('joshdick/onedark.vim')
@@ -24,6 +28,7 @@ if exists('g:loaded_minpac')
   call minpac#add('itchyny/lightline.vim')
   call minpac#add('sainnhe/everforest')
 
+  call minpac#add('elixir-editors/vim-elixir')
   call minpac#add('prabirshrestha/vim-lsp')
   call minpac#add('mattn/vim-lsp-settings')
   call minpac#add('prabirshrestha/asyncomplete.vim')
@@ -33,6 +38,8 @@ if exists('g:loaded_minpac')
   call minpac#add('dense-analysis/ale')
   call minpac#add('rhysd/vim-lsp-ale')
 
+  call minpac#add('junegunn/fzf')
+  call minpac#add('junegunn/fzf.vim')
 
   " Uncomment to load all plugins right now
   "packloadall
@@ -43,6 +50,12 @@ function! ConfigElixirFormatter()
     let l:fmt_file = findfile(".formatter.exs", l:git_root)
     let g:ale_elixir_mix_format_options = "--dot-formatter " . l:fmt_file
 endfunction
+
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
 
 " All this is ALE elixir setup
 let g:ale_linters = { 'elixir': ['vim-lsp', 'credo', 'mix'] }
@@ -141,7 +154,7 @@ set softtabstop=4
 " custom chars for 'set list'
 set listchars=eol:$,tab:│·,space:.,trail:·
 
-set rtp+=/opt/homebrew/opt/fzf
+"set rtp+=/opt/homebrew/opt/fzf
 
 " for terminal mode, go into 'term-normal' with ctrl-b
 tnoremap <C-b> <C-\><C-n>
