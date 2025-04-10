@@ -33,11 +33,6 @@ text = "CellBackground"
 [font.normal]
 family = "MesloLGS NF"
 
-[[key.bindings]]
-action = "CreateNewWindow"
-key = "N"
-mods = "Command"
-
 [window]
 dynamic_title = true
 opacity = 0.85
