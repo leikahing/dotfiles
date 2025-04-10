@@ -34,3 +34,12 @@ alias start_pg="podman run -it -e POSTGRES_PASSWORD=\"postgres\" -p 5432:5432 po
 
 alias sql_dev='pgcli -D local'
 alias sql_prod='pgcli -D production'
+
+# git thingies
+alias pretendprune='git checkout -q main && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do [[ $(git cherry main $(git commit-tree $(git rev-parse "$branch"^{tree}) -p $(git merge-base main $branch) -m _)) == "-"* ]] && echo "$branch is merged into main and can be deleted"; done'
+alias squashprune='git checkout -q main && git for-each-ref refs/heads/ "--format=%(refname:short)" | while read branch; do mergeBase=$(git merge-base main $branch) && [[ $(git cherry main $(git commit-tree $(git rev-parse "$branch^{tree}") -p $mergeBase -m _)) == "-"* ]] && git branch -D $branch; done'
+
+# dumb helpers
+rand_account() {
+    tr -dc '0-9' </dev/random | head -c "$1"
+}

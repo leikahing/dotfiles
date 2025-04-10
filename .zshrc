@@ -55,9 +55,13 @@ if type brew &> /dev/null; then
 
   # enable brew's zsh completions - this needs to go before compinit
   FPATH="${brew_prefix}/share/zsh/site-functions:${FPATH}"
-  source ${brew_prefix}/opt/asdf/libexec/asdf.sh
   unset brew_prefix
 fi
+
+if type asdf &> /dev/null; then
+  export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:${PATH}"
+fi
+
 
 autoload -Uz compinit && compinit
 [[ ~/.zcompdump.zwc -nt ~/.zcompdump ]] || zcompile-many ~/.zcompdump
@@ -72,6 +76,9 @@ source ${plugin_dir}/zsh-autosuggestions/zsh-autosuggestions.zsh
 # load my custom aliases
 source ${plugin_dir}/aliases.zsh
 source ${plugin_dir}/erlang.zsh
+
+# load fzf
+source <(fzf --zsh)
 
 unfunction zcompile-many
 unset plugin_dir
